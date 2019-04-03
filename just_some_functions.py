@@ -42,6 +42,6 @@ def generic_progression(n, k):
 
 #Geometric sequence
 def geometric_sequence(a, r, N):
-    return (a * (1 - r**n))/(1-r)
+    return (a * (1 - r**N))/(1-r)
 ''' Returns the sum of the geometric sequence from 1 to N where a is the first term, r is the common ratio, and N is the upper bound of the summation. '''
 
