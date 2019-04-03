@@ -21,7 +21,7 @@ def sieve_of_eratosthenes(n):
         for k in range(j, math.floor(n / seq_primes[j]) + 1):
             sieve_set.discard(seq_primes[k] * seq_primes[j])
     return sorted(sieve_set)
-''' The Sieve of Eratosthenes prints all prime numbers below an upper bound N '''
+''' The Sieve of Eratosthenes prints all prime numbers below an upper bound N. Using sum(sieve_of_eratosthenes) will return the sum of the all of the prime values below N. '''
 
 #Definition of a leap year
 def is_leap(year):
@@ -41,5 +41,7 @@ def generic_progression(n, k):
 ''' Returns the Nth partial sum of the multiples of some number, k,  up to an upper bound, N '''
 
 #Geometric sequence
-def geometric_sequence(a, n):
-    return (a * (1 - r**n))
+def geometric_sequence(a, r, N):
+    return (a * (1 - r**n))/(1-r)
+''' Returns the sum of the geometric sequence from 1 to N where a is the first term, r is the common ratio, and N is the upper bound of the summation. '''
+
