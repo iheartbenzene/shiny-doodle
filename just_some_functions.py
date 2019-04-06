@@ -1,4 +1,9 @@
 import math
+import numpy as np
+from numpy import linalg as la
+import scipy as sc
+from scipy import linalg as scla
+import sklearn as sk
 
 #Factorials
 def factorial(n):
@@ -60,3 +65,19 @@ def fibonacci_sequence(n):
         i+=1
     return""
 ''' The Finobacci sequence '''
+
+#Gradient Descent
+def gradient_descent(x, y, theta, alpha, m, iterations):
+    x_transpose = x.transpose()
+    for i in range(iterations):
+        hypothesis = np.dot(x, theta)
+        errors = hypothesis - y
+        
+        cost = np.sum(errors ** 2) / (2 * m)
+        print("At iteration %d the cose is %f" % (i, cost))
+        
+        gradient = np.dot(xTrans, loss) / m
+        
+        theta = theta - alpha * gradient
+    return theta
+''' The method for gradient descent '''
